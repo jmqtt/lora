@@ -1,0 +1,1484 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>第14章 Class B MAC命令 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="14 Class B MAC commands.html" />
+    
+    
+    <link rel="prev" href="13 Class B Downlink slot timing.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    前言
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="1 Introduction.html">
+            
+                <a href="1 Introduction.html">
+            
+                    
+                    第1章 介绍
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="1 Introduction.html">
+            
+                <a href="1 Introduction.html#1.1">
+            
+                    
+                    1.1 LoRaWAN Classes
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="1 Introduction.html">
+            
+                <a href="1 Introduction.html#1.2">
+            
+                    
+                    1.2 文档约定
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="2 Introduction on LoRaWAN options.html">
+            
+                <a href="2 Introduction on LoRaWAN options.html">
+            
+                    
+                    第2章 LoRaWAN Classes 类型介绍
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="2 Introduction on LoRaWAN options.html">
+            
+                <a href="2 Introduction on LoRaWAN options.html#2.1">
+            
+                    
+                    2.1 LoRaWAN Classes
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="2 Introduction on LoRaWAN options.html">
+            
+                <a href="2 Introduction on LoRaWAN options.html#2.2">
+            
+                    
+                    2.2 文档范围
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="CLASS A - ALL END-DEVICE.html">
+            
+                <a href="CLASS A - ALL END-DEVICE.html">
+            
+                    
+                    CLASS A - ALL END-DEVICE 所有终端
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="3 Physical Message Formats.html">
+            
+                <a href="3 Physical Message Formats.html">
+            
+                    
+                    第3章 PHY 帧格式
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="3 Physical Message Formats.html">
+            
+                <a href="3 Physical Message Formats.html#3.1">
+            
+                    
+                    3.1 上行消息
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="3 Physical Message Formats.html">
+            
+                <a href="3 Physical Message Formats.html#3.2">
+            
+                    
+                    3.2 下行消息
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3" data-path="3 Physical Message Formats.html">
+            
+                <a href="3 Physical Message Formats.html#3.3">
+            
+                    
+                    3.3 接收窗口
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.3.1" data-path="3 Physical Message Formats.html">
+            
+                <a href="3 Physical Message Formats.html#3.3.1">
+            
+                    
+                    3.3.1 第一接收窗口的信道，数据速率和启动
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3.2" data-path="3 Physical Message Formats.html">
+            
+                <a href="3 Physical Message Formats.html#3.3.2">
+            
+                    
+                    3.3.2 第二接收窗口的信道，数据速率和启动
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3.3" data-path="3 Physical Message Formats.html">
+            
+                <a href="3 Physical Message Formats.html#3.3.3">
+            
+                    
+                    3.3.3 接收窗口的持续时间
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3.4" data-path="3 Physical Message Formats.html">
+            
+                <a href="3 Physical Message Formats.html#3.3.4">
+            
+                    
+                    3.3.4 接收方在接收窗口期间的处理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3.5" data-path="3 Physical Message Formats.html">
+            
+                <a href="3 Physical Message Formats.html#3.3.5">
+            
+                    
+                    3.3.5 网络发送消息给终端
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3.6" data-path="3 Physical Message Formats.html">
+            
+                <a href="3 Physical Message Formats.html#3.3.6">
+            
+                    
+                    3.3.6 接收窗口的重要事项
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="4 MAC Message Formats.html">
+            
+                <a href="4 MAC Message Formats.html">
+            
+                    
+                    第4章 MAC帧格式
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="4 MAC Message Formats.html">
+            
+                <a href="4 MAC Message Formats.html#4.1">
+            
+                    
+                    4.1 MAC层
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="4 MAC Message Formats.html">
+            
+                <a href="4 MAC Message Formats.html#4.2">
+            
+                    
+                    4.2 MAC头(MHDR字段)
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.2.1" data-path="4 MAC Message Formats.html">
+            
+                <a href="4 MAC Message Formats.html#4.2.1">
+            
+                    
+                    4.2.1 第一接收窗口的信道，数据速率和启动
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2.2" data-path="4 MAC Message Formats.html">
+            
+                <a href="4 MAC Message Formats.html#4.2.2">
+            
+                    
+                    4.2.2 数据消息的主版本(Major位字段)
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3" data-path="4 MAC Message Formats.html">
+            
+                <a href="4 MAC Message Formats.html#4.3">
+            
+                    
+                    4.3 MAC载荷(MACPayload)
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.3.1" data-path="4 MAC Message Formats.html">
+            
+                <a href="4 MAC Message Formats.html#4.3.1">
+            
+                    
+                    4.3.1 帧头(FHDR)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3.2" data-path="4 MAC Message Formats.html">
+            
+                <a href="4 MAC Message Formats.html#4.3.2">
+            
+                    
+                    4.3.2 端口字段(FPort)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3.3" data-path="4 MAC Message Formats.html">
+            
+                <a href="4 MAC Message Formats.html#4.3.3">
+            
+                    
+                    4.3.3 MAC帧载荷加密(FRMPayload)
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.4" data-path="4 MAC Message Formats.html">
+            
+                <a href="4 MAC Message Formats.html#4.4">
+            
+                    
+                    4.4 消息校验码(MIC)
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="5 MAC Commands.html">
+            
+                <a href="5 MAC Commands.html">
+            
+                    
+                    第5章 MAC命令
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1" data-path="5 MAC Commands.html">
+            
+                <a href="5 MAC Commands.html#5.1">
+            
+                    
+                    5.1 Link Check 命令 (LinkCheckReq, LinkCheckAns)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.2" data-path="5 MAC Commands.html">
+            
+                <a href="5 MAC Commands.html#5.2">
+            
+                    
+                    5.2 Link ADR 命令(LinkADRReq, LinkADRAns)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.3" data-path="5 MAC Commands.html">
+            
+                <a href="5 MAC Commands.html#5.3">
+            
+                    
+                    5.3 终端发射占空比(DutyCycleReq, DutyCycleAns)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.4" data-path="5 MAC Commands.html">
+            
+                <a href="5 MAC Commands.html#5.4">
+            
+                    
+                    5.4 接收窗口参数(RXParamSetupReq,RXParamSetupAns)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.5" data-path="5 MAC Commands.html">
+            
+                <a href="5 MAC Commands.html#5.5">
+            
+                    
+                    5.5 终端状态(DevStatusReq, DevStatusAns)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.6" data-path="5 MAC Commands.html">
+            
+                <a href="5 MAC Commands.html#5.6">
+            
+                    
+                    5.6 信道的创建和修改(NewChannelReq, NewChannelAns, DlChannelReq, DlChannelAns)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.7" data-path="5 MAC Commands.html">
+            
+                <a href="5 MAC Commands.html#5.7">
+            
+                    
+                    5.7 TX 和 RX 之间的延时设置(RXTimingSetupReq, RXTimingSetupAns)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.8" data-path="5 MAC Commands.html">
+            
+                <a href="5 MAC Commands.html#5.8">
+            
+                    
+                    5.8 终端发送参数(TxParamSetupReq, TxParamSetupAns)
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="6 End-Device Activation.html">
+            
+                <a href="6 End-Device Activation.html">
+            
+                    
+                    第6章 终端激活
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.8.1" data-path="6 End-Device Activation.html">
+            
+                <a href="6 End-Device Activation.html#6.1">
+            
+                    
+                    6.1 终端激活后的数据存储
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.2" data-path="6 End-Device Activation.html">
+            
+                <a href="6 End-Device Activation.html#6.2">
+            
+                    
+                    6.2 空中激活 OTAA
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.8.2.1" data-path="6 End-Device Activation.html">
+            
+                <a href="6 End-Device Activation.html#6.2.1">
+            
+                    
+                    6.2.1 终端 ID (DevEUI)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.2.2" data-path="6 End-Device Activation.html">
+            
+                <a href="6 End-Device Activation.html#6.2.2">
+            
+                    
+                    6.2.2 应用密钥(AppKey)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.2.3" data-path="6 End-Device Activation.html">
+            
+                <a href="6 End-Device Activation.html#6.2.3">
+            
+                    
+                    6.2.3 加网流程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.2.4" data-path="6 End-Device Activation.html">
+            
+                <a href="6 End-Device Activation.html#6.2.4">
+            
+                    
+                    6.2.4 Join-request 消息
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.2.5" data-path="6 End-Device Activation.html">
+            
+                <a href="6 End-Device Activation.html#6.2.5">
+            
+                    
+                    6.2.5 Join-accept 消息
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.3" data-path="6 End-Device Activation.html">
+            
+                <a href="6 End-Device Activation.html#6.3">
+            
+                    
+                    6.3 独立激活 ABP
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="7 Retransmissions back-off Activation.html">
+            
+                <a href="7 Retransmissions back-off Activation.html">
+            
+                    
+                    第7章 重传退避
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="CLASS B - BEACON.html">
+            
+                <a href="CLASS B - BEACON.html">
+            
+                    
+                    CLASS B – BEACON 信标
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11" data-path="8 Introduction to Class B.html">
+            
+                <a href="8 Introduction to Class B.html">
+            
+                    
+                    第8章 Class B 介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12" data-path="9 Principle of synchronous network initiated downlink.html">
+            
+                <a href="9 Principle of synchronous network initiated downlink.html">
+            
+                    
+                    第9章 下行同步网络的原理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13" data-path="10 Uplink frame in Class B mode.html">
+            
+                <a href="10 Uplink frame in Class B mode.html">
+            
+                    
+                    第10章 Class B 模式的上行帧
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14" data-path="11 Downlink Ping frame format.html">
+            
+                <a href="11 Downlink Ping frame format.html">
+            
+                    
+                    第11章 Class B 模式的下行帧(Class B选项)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15" data-path="12 Beacon acquisition and tracking.html">
+            
+                <a href="12 Beacon acquisition and tracking.html">
+            
+                    
+                    第12章 信标的获得和追踪
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16" data-path="13 Class B Downlink slot timing.html">
+            
+                <a href="13 Class B Downlink slot timing.html">
+            
+                    
+                    第13章 Class B下行时隙时序
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.16.1" data-path="13 Class B Downlink slot timing.html">
+            
+                <a href="13 Class B Downlink slot timing.html#13.1">
+            
+                    
+                    13.1 定义
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.2" data-path="13 Class B Downlink slot timing.html">
+            
+                <a href="13 Class B Downlink slot timing.html#13.2">
+            
+                    
+                    13.2 时隙随机化
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.17" data-path="14 Class B MAC commands.html">
+            
+                <a href="14 Class B MAC commands.html">
+            
+                    
+                    第14章 Class B MAC命令
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.17.1" data-path="14 Class B MAC commands.html">
+            
+                <a href="14 Class B MAC commands.html#14.1">
+            
+                    
+                    14.1 PingSlotInfoReq MAC命令
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.17.2" data-path="14 Class B MAC commands.html">
+            
+                <a href="14 Class B MAC commands.html#14.2">
+            
+                    
+                    14.2 BeaconFreReq MAC命令
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.17.3" data-path="14 Class B MAC commands.html">
+            
+                <a href="14 Class B MAC commands.html#14.3">
+            
+                    
+                    14.3 PingSlotChannelReq MAC命令
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.17.4" data-path="14 Class B MAC commands.html">
+            
+                <a href="14 Class B MAC commands.html#14.4">
+            
+                    
+                    14.4 BeaconTimingReq MAC命令
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.17.5" data-path="14 Class B MAC commands.html">
+            
+                <a href="14 Class B MAC commands.html#14.5">
+            
+                    
+                    14.5 BeaconTimingAns MAC命令
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.18" data-path="15 Beaconing[Class B option].html">
+            
+                <a href="15 Beaconing[Class B option].html">
+            
+                    
+                    第15章 信标(Class B选项)
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.18.1" data-path="15 Beaconing[Class B option].html">
+            
+                <a href="15 Beaconing[Class B option].html#15.1">
+            
+                    
+                    15.1 信标物理层
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.18.2" data-path="15 Beaconing[Class B option].html">
+            
+                <a href="15 Beaconing[Class B option].html#15.2">
+            
+                    
+                    15.2 信标物理帧格式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.18.3" data-path="15 Beaconing[Class B option].html">
+            
+                <a href="15 Beaconing[Class B option].html#15.3">
+            
+                    
+                    15.3 信标 GwSpecific 域格式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.18.4" data-path="15 Beaconing[Class B option].html">
+            
+                <a href="15 Beaconing[Class B option].html#15.4">
+            
+                    
+                    15.4 信标准确的时隙
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.18.5" data-path="15 Beaconing[Class B option].html">
+            
+                <a href="15 Beaconing[Class B option].html#15.5">
+            
+                    
+                    15.5 网络下行链路路由更新要求
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.19" data-path="16 Class B unicast & multicast downlink channel frequencies.html">
+            
+                <a href="16 Class B unicast & multicast downlink channel frequencies.html">
+            
+                    
+                    第16章 Class B单播/多播下行信道频率
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.19.1" data-path="16 Class B unicast & multicast downlink channel frequencies.html">
+            
+                <a href="16 Class B unicast & multicast downlink channel frequencies.html#16.1">
+            
+                    
+                    16.1 欧盟 863-870MHz ISM 频段
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.19.2" data-path="16 Class B unicast & multicast downlink channel frequencies.html">
+            
+                <a href="16 Class B unicast & multicast downlink channel frequencies.html#16.2">
+            
+                    
+                    16.2 美国 902-928MHz ISM 频段
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.20" data-path="CLASS C – CONTINUOUSLY LISTENING.html">
+            
+                <a href="CLASS C – CONTINUOUSLY LISTENING.html">
+            
+                    
+                    CLASS C - CONTINUOUSLY LISTENING 持续接收
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.21" data-path="17 Class C Continuously listening end-device.html">
+            
+                <a href="17 Class C Continuously listening end-device.html">
+            
+                    
+                    第17章 持续接收的终端
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.21.1" data-path="17 Class C Continuously listening end-device.html">
+            
+                <a href="17 Class C Continuously listening end-device.html#17.1">
+            
+                    
+                    17.1 Class C 的第二接收窗口持续时间
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.21.2" data-path="17 Class C Continuously listening end-device.html">
+            
+                <a href="17 Class C Continuously listening end-device.html#17.2">
+            
+                    
+                    17.2 Class C 对多播下行的处理
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >第14章 Class B MAC命令</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+                                <section class="normal markdown-section">
+                                
+                                <h2 id="&#x7B2C;14&#x7AE0;-class-b-mac&#x547D;&#x4EE4;">&#x7B2C;14&#x7AE0; Class B Mac&#x547D;&#x4EE4;</h2>
+<p>&#x6240;&#x6709;&#x5728; Class A &#x534F;&#x8BAE;&#x4E2D;&#x63CF;&#x8FF0;&#x7684;&#x547D;&#x4EE4;&#x90FD;&#x5E94;&#x8BE5;&#x5728; Class B &#x4E2D;&#x5B9E;&#x73B0;&#x3002;Class B &#x534F;&#x8BAE;&#x8FD8;&#x989D;&#x5916;&#x6DFB;&#x52A0;&#x4E86;&#x5982;&#x4E0B;&#x7684; <strong>MAC</strong> &#x547D;&#x4EE4;&#x3002;</p>
+<table>
+   <tr>
+      <td rowspan="2"><b>CID</b></td>
+      <td rowspan="2"><b>Command</b></td>
+      <td colspan="2"><b>&#x7531;&#x8C01;&#x4F20;&#x8F93;</b></td>
+      <td rowspan="2"><b>&#x63CF;&#x8FF0;</b></td>
+   </tr>
+   <tr>
+      <td>&#x7EC8;&#x7AEF;</td>
+      <td>&#x7F51;&#x5173;</td>
+   </tr>
+   <tr>
+      <td>0x10</td>
+      <td><b>PingSlotInfoReq</b></td>
+      <td>x</td>
+      <td></td>
+      <td>&#x7EC8;&#x7AEF;&#x8BBE;&#x5907;&#x7528;&#x4E8E;&#x5C06; ping &#x5355;&#x64AD;&#x65F6;&#x9699;&#x6570;&#x636E;&#x901F;&#x7387;&#x548C;&#x5468;&#x671F;&#x6027;&#x4F20;&#x9001;&#x7ED9;&#x7F51;&#x7EDC;&#x670D;&#x52A1;&#x5668;</td>
+   </tr>
+   <tr>
+      <td>0x10</td>
+      <td><b>PingSlotInfoAns</b></td>
+      <td></td>
+      <td>x</td>
+      <td>&#x7528;&#x4E8E;&#x7F51;&#x7EDC;&#x5E94;&#x7B54;<b>PingInfoSlotReq</b>&#x547D;&#x4EE4;</td>
+   </tr>
+   <tr>
+      <td>0x11</td>
+      <td><b>PingSlotChannelReq</b></td>
+      <td></td>
+      <td>x</td>
+      <td>&#x7528;&#x4E8E;&#x7F51;&#x7EDC;&#x670D;&#x52A1;&#x5668;&#x8BBE;&#x7F6E;&#x4E00;&#x4E2A;&#x7EC8;&#x7AEF;&#x7684;&#x5355;&#x64AD; ping &#x901A;&#x9053;</td>
+   </tr>
+   <tr>
+      <td>0x11</td>
+      <td><b>PingSlotFreqAns</b></td>
+      <td>x</td>
+      <td></td>
+      <td>&#x7EC8;&#x7AEF;&#x7528;&#x4E8E;&#x5E94;&#x7B54;<b>PingSlotChannelReq</b>&#x547D;&#x4EE4;</td>
+   </tr>
+   <tr>
+      <td>0x12</td>
+      <td><b>BeaconTimingReq</b></td>
+      <td>x</td>
+      <td></td>
+      <td>&#x7528;&#x4E8E;&#x7EC8;&#x7AEF;&#x5411;&#x7F51;&#x7EDC;&#x8BF7;&#x6C42;&#x4E0B;&#x4E00;&#x4E2A;&#x4FE1;&#x6807;&#x65F6;&#x95F4;&#x548C;&#x4FE1;&#x9053;</td>
+   </tr>
+   <tr>
+      <td>0x12</td>
+      <td><b>BeaconTimingAns</b></td>
+      <td></td>
+      <td>x</td>
+      <td>&#x7528;&#x4E8E;&#x7F51;&#x7EDC;&#x5E94;&#x7B54;<b>BeaconTimingReq</b>&#x547D;&#x4EE4;</td>
+   </tr>
+   <tr>
+      <td>0x13</td>
+      <td><b>BeaconFreqReq</b></td>
+      <td></td>
+      <td>x</td>
+      <td>&#x7528;&#x4E8E;&#x7F51;&#x7EDC;&#x670D;&#x52A1;&#x5668;&#x4FEE;&#x6539;&#x7EC8;&#x7AEF;&#x5E0C;&#x671B;&#x63A5;&#x6536;&#x4FE1;&#x6807;&#x5E7F;&#x64AD;&#x7684;&#x9891;&#x7387;</td>
+   </tr>
+   <tr>
+      <td>0x13</td>
+      <td><b>BeaconFreqAns</b></td>
+      <td>x</td>
+      <td></td>
+      <td>&#x7528;&#x4E8E;&#x7EC8;&#x7AEF;&#x5E94;&#x7B54;<b>BeaconFreqReq</b>&#x547D;&#x4EE4;</td>
+   </tr>
+</table>
+
+<h3 id="141-pingslotinforeq"><a name="14.1">14.1 PingSlotInfoReq</a></h3>
+<p>&#x7EC8;&#x7AEF;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;<strong>PingSlotInfoReq</strong>&#x547D;&#x4EE4;&#x6765;&#x544A;&#x77E5;&#x670D;&#x52A1;&#x5668;&#x5B83;&#x7684;&#x5355;&#x64AD; ping &#x65F6;&#x9699;&#x5468;&#x671F;&#x4EE5;&#x53CA;&#x671F;&#x671B;&#x7684;&#x6570;&#x636E;&#x901F;&#x7387;&#x3002;&#x8FD9;&#x4E2A;&#x547D;&#x4EE4;&#x53EA;&#x80FD;&#x7528;&#x4E8E;&#x544A;&#x77E5;&#x670D;&#x52A1;&#x5668;&#x5355;&#x64AD; ping &#x65F6;&#x9699;&#x7684;&#x53C2;&#x6570;&#x3002;&#x591A;&#x64AD; ping &#x65F6;&#x9699;&#x5B8C;&#x5168;&#x7531;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x8FDB;&#x884C;&#x5B9A;&#x4E49;&#x800C;&#x4E0D;&#x5E94;&#x8BE5;&#x4F7F;&#x7528;&#x6B64;&#x547D;&#x4EE4;&#x8BBE;&#x7F6E;&#x3002;</p>
+<table>
+   <tr>
+      <td><b>Size(bytes)</b></td>
+      <td>1</td>
+   </tr>
+   <tr>
+      <td><b>PingSlotInfoReq Payload</b></td>
+      <td>Periodicity &amp; data rate</td>
+   </tr>
+</table>
+
+
+<table>
+   <tr>
+      <td><b>Bit#</b></td>
+      <td>7</td>
+      <td>[6:4]</td>
+      <td>[3:0]</td>
+   </tr>
+   <tr>
+      <td><b>Periodicity &amp; data rate</b></td>
+      <td>RFU</td>
+      <td>Periodicity</td>
+      <td>Data rate</td>
+   </tr>
+</table>
+
+<p><strong>Periodicity</strong>&#x5B57;&#x6BB5;&#x662F;&#x4E00;&#x4E2A;&#x65E0;&#x7B26;&#x53F7;3&#x4F4D;&#x6574;&#x6570;&#xFF0C;&#x7528;&#x4E8E;&#x7EC8;&#x7AEF;&#x5F53;&#x524D;&#x4F7F;&#x7528;&#x7684; ping &#x65F6;&#x9699;&#x5468;&#x671F;&#x7684;&#x7F16;&#x7801;&#xFF0C;&#x7F16;&#x7801;&#x516C;&#x5F0F;&#x5982;&#x4E0B;:</p>
+<pre><code>                             pingSlotPeriod = 2^Periodicity(&#x5355;&#x4F4D;&#x662F;s)
+</code></pre><ul>
+<li>Periodicity = 0 &#x8868;&#x793A;&#x7EC8;&#x7AEF;&#x6BCF;1s&#x6253;&#x5F00;&#x4E00;&#x4E2A; ping &#x65F6;&#x9699;&#x3002;</li>
+<li>Periodicity = 7 &#x8868;&#x793A;&#x7EC8;&#x7AEF;&#x6BCF;128s&#x6253;&#x5F00;&#x4E00;&#x4E2A; ping &#x65F6;&#x9699;&#xFF0C;&#x8FD9;&#x662F; LoRaWAN Class B &#x534F;&#x8BAE;&#x4E2D;&#x6240;&#x652F;&#x6301;&#x7684;&#x6700;&#x5927; ping &#x65F6;&#x9699;&#x5468;&#x671F;&#x3002;</li>
+</ul>
+<p><strong>Data rate</strong> &#x5B57;&#x6BB5;&#x8868;&#x793A;&#x7EC8;&#x7AEF;&#x671F;&#x671B;&#x6536;&#x5230; ping &#x65F6;&#x9699;&#x7684;&#x6570;&#x636E;&#x7387;&#x3002;&#x5B83;&#x4F7F;&#x7528;&#x7684;&#x7F16;&#x7801;&#x65B9;&#x5F0F;&#x4E0E; Class A &#x534F;&#x8BAE;&#x4E2D;&#x6240;&#x63CF;&#x8FF0;&#x7684;<strong>LinkAdrReq</strong>&#x547D;&#x4EE4;&#x76F8;&#x540C;&#x3002;</p>
+<p>&#x670D;&#x52A1;&#x5668;&#x9700;&#x8981;&#x77E5;&#x9053;&#x7EC8;&#x7AEF;&#x7684; ping &#x65F6;&#x9699;&#x5468;&#x671F;&#x6216;&#x8005;&#x671F;&#x671B;&#x7684;&#x6570;&#x636E;&#x7387;&#xFF0C;&#x5426;&#x5219; Class B &#x7684;&#x4E0B;&#x884C;&#x5C06;&#x4E0D;&#x4F1A;&#x6210;&#x529F;&#x3002;&#x56E0;&#x6B64;&#x7EC8;&#x7AEF;&#x5728; <strong>PingSlotInfoReq</strong> &#x547D;&#x4EE4;&#x53D1;&#x51FA;&#x4E4B;&#x540E;&#x5FC5;&#x987B;&#x6536;&#x5230; <strong>PingSlotInfoAns</strong> &#x547D;&#x4EE4;&#x7684;&#x56DE;&#x590D;&#x624D;&#x80FD;&#x4ECE; Class A &#x5207;&#x6362;&#x5230; Class B&#x3002;&#x5F53;&#x7EC8;&#x7AEF;&#x9700;&#x8981;&#x6539;&#x53D8; ping &#x65F6;&#x9699;&#x5468;&#x671F;&#x4EE5;&#x53CA;&#x6570;&#x636E;&#x7387;&#x65F6;&#xFF0C;&#x9700;&#x8981;&#x5148;&#x6062;&#x590D;&#x5230; Class A &#x6A21;&#x5F0F;&#xFF0C;&#x5728;&#x53D1;&#x9001; <strong>PingSlotInfoReq</strong> &#x547D;&#x4EE4;&#x5E76;&#x4E14;&#x6536;&#x5230;&#x670D;&#x52A1;&#x5668;&#x7AEF;&#x7684; <strong>PinSlotInfoAns</strong> &#x547D;&#x4EE4;&#x56DE;&#x590D;&#x4E4B;&#x540E;&#xFF0C;&#x5C31;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x65B0;&#x7684;&#x53C2;&#x6570;&#x5207;&#x6362;&#x56DE; Class B&#x6A21;&#x5F0F;&#x3002;<strong>PingSlotInfoReq</strong> &#x547D;&#x4EE4;&#x53EF;&#x4EE5;&#x548C; <strong>FHDRFOpt</strong> &#x5B57;&#x6BB5;&#x91CC;&#x7684;&#x4EFB;&#x4F55; MAC &#x547D;&#x4EE4;&#x8FDB;&#x884C;&#x8FDE;&#x63A5;&#xFF0C;&#x5982; Class A &#x534F;&#x8BAE;&#x4E2D;&#x7684;&#x5E27;&#x683C;&#x5F0F;&#x6240;&#x8FF0;&#x3002;</p>
+<h3 id="142-beaconfreqreq"><a name="14.2">14.2 BeaconFreqReq</a></h3>
+<p>&#x8BE5;&#x547D;&#x4EE4;&#x7531;&#x670D;&#x52A1;&#x5668;&#x53D1;&#x5F80;&#x7EC8;&#x7AEF;&#xFF0C;&#x7528;&#x4E8E;&#x4FEE;&#x6539;&#x7EC8;&#x7AEF;&#x671F;&#x671B;&#x4FE1;&#x6807;&#x7684;&#x9891;&#x7387;&#x3002;</p>
+<table>
+   <tr>
+      <td><b>Octets</b></td>
+      <td>3</td>
+   </tr>
+   <tr>
+      <td><b>PingSlotChannelReq Payload</b></td>
+      <td>Frequency</td>
+   </tr>
+</table>
+
+<p>Frequency&#x5B57;&#x6BB5;&#x548C;Class A&#x534F;&#x8BAE;&#x4E2D;&#x5B9A;&#x4E49;&#x7684; <strong>NewChannelReq</strong> MAC&#x547D;&#x4EE4;&#x6709;&#x7740;&#x76F8;&#x540C;&#x7684;&#x7F16;&#x7801;&#x65B9;&#x5F0F;&#x3002;</p>
+<p><strong>Frequency</strong>&#x662F;24&#x4F4D;&#x7684;&#x65E0;&#x7B26;&#x53F7;&#x6574;&#x6570;&#x3002;&#x5B9E;&#x9645;&#x7684;&#x4FE1;&#x6807;&#x4FE1;&#x9053;&#x9891;&#x7387;&#x662F;100 x Frequency,&#x5355;&#x4F4D;Hz&#x3002;&#x4FE1;&#x6807;&#x7684;&#x4FE1;&#x9053;&#x4EE5; 100Hz &#x4E3A;&#x57FA;&#x672C;&#x5355;&#x4F4D;&#xFF0C;&#x53D8;&#x5316;&#x8303;&#x56F4;&#x5728; 100MHz &#x5230; 1.67GHz &#x4E4B;&#x95F4;&#x3002;&#x7EC8;&#x7AEF;&#x5FC5;&#x987B;&#x68C0;&#x67E5;&#x8BE5;&#x9891;&#x7387;&#x662F;&#x4E0D;&#x662F;&#x5C04;&#x9891;&#x786C;&#x4EF6;&#x6240;&#x5141;&#x8BB8;&#x7684;&#x8303;&#x56F4;&#xFF0C;&#x4E0D;&#x662F;&#x5219;&#x9700;&#x8981;&#x8FD4;&#x56DE;&#x9519;&#x8BEF;&#x3002;</p>
+<p>&#x4E00;&#x4E2A;&#x6709;&#x6548;&#x7684;&#x975E;&#x96F6;&#x9891;&#x7387;&#x5C06;&#x4F1A;&#x5F3A;&#x5236;&#x7EC8;&#x7AEF;&#x4EE5;&#x4E00;&#x4E2A;&#x56FA;&#x5B9A;&#x7684;&#x9891;&#x7387;&#x4FE1;&#x9053;&#x53BB;&#x76D1;&#x542C;&#x4FE1;&#x6807;&#xFF0C;&#x5373;&#x4F7F;&#x9ED8;&#x8BA4;&#x662F;&#x6307;&#x5B9A;&#x8DF3;&#x9891;&#x4FE1;&#x6807;(&#x5373;&#x7F8E;&#x56FD;ISM&#x9891;&#x6BB5;)&#x3002;</p>
+<p>&#x82E5;&#x9891;&#x7387;&#x4E3A;0&#x5219;&#x8868;&#x793A;&#x7EC8;&#x7AEF;&#x4F7F;&#x7528;&#x201C;&#x4FE1;&#x6807;&#x7269;&#x7406;&#x5C42;&#x201D;&#x90E8;&#x5206;&#x6240;&#x5B9A;&#x4E49;&#x7684;&#x9ED8;&#x8BA4;&#x4FE1;&#x6807;&#x9891;&#x7387;&#x8BA1;&#x5212;&#xFF0C;&#x5728;&#x9002;&#x7528;&#x7684;&#x60C5;&#x51B5;&#x4E4B;&#x4E0B;&#x6062;&#x590D;&#x6210;&#x8DF3;&#x9891;&#x4FE1;&#x6807;&#x641C;&#x7D22;&#x3002;</p>
+<h3 id="143-pingslotchannnelreq"><a name="14.3">14.3 PingSlotChannnelReq</a></h3>
+<p>&#x8BE5;&#x547D;&#x4EE4;&#x7531;&#x670D;&#x52A1;&#x5668;&#x53D1;&#x5F80;&#x7EC8;&#x7AEF;&#xFF0C;&#x7528;&#x4E8E;&#x4FEE;&#x6539;&#x7EC8;&#x7AEF;&#x671F;&#x671B;&#x4E0B;&#x884C; ping &#x7684;&#x9891;&#x7387;&#x3002;</p>
+<table>
+   <tr>
+      <td><b>Octets</b></td>
+      <td>3</td>
+      <td>1</td>
+   </tr>
+   <tr>
+      <td><b>PingSlotChannelReq Payload</b></td>
+      <td>Frequency</td>
+      <td>DrRange</td>
+   </tr>
+</table>
+
+<p>Frequency &#x5B57;&#x6BB5;&#x548C;Class A&#x534F;&#x8BAE;&#x4E2D;&#x5B9A;&#x4E49;&#x7684; <strong>NewChannelReq</strong> MAC &#x547D;&#x4EE4;&#x6709;&#x7740;&#x76F8;&#x540C;&#x7684;&#x7F16;&#x7801;&#x65B9;&#x5F0F;&#x3002;</p>
+<p><strong>Frequency</strong>&#x662F;24&#x4F4D;&#x7684;&#x65E0;&#x7B26;&#x53F7;&#x6574;&#x6570;&#x3002;&#x5B9E;&#x9645;&#x7684;&#x4FE1;&#x6807;&#x4FE1;&#x9053;&#x9891;&#x7387;&#x662F;100 x Frequency,&#x5355;&#x4F4D;Hz&#x3002;&#x4FE1;&#x6807;&#x7684;&#x4FE1;&#x9053;&#x4EE5;100Hz&#x4E3A;&#x57FA;&#x672C;&#x5355;&#x4F4D;&#xFF0C;&#x53D8;&#x5316;&#x8303;&#x56F4;&#x5728;100MHz&#x5230;1.67GHz&#x4E4B;&#x95F4;&#x3002;&#x7EC8;&#x7AEF;&#x5FC5;&#x987B;&#x68C0;&#x67E5;&#x8BE5;&#x9891;&#x7387;&#x662F;&#x4E0D;&#x662F;&#x5C04;&#x9891;&#x786C;&#x4EF6;&#x6240;&#x5141;&#x8BB8;&#x7684;&#x8303;&#x56F4;&#xFF0C;&#x4E0D;&#x662F;&#x5219;&#x9700;&#x8981;&#x8FD4;&#x56DE;&#x9519;&#x8BEF;&#x3002;</p>
+<p>&#x82E5;&#x9891;&#x7387;&#x4E3A;0&#x5219;&#x8868;&#x793A;&#x7EC8;&#x7AEF;&#x4F7F;&#x7528;&#x9ED8;&#x8BA4;&#x4FE1;&#x6807;&#x9891;&#x7387;&#x8BA1;&#x5212;&#x3002;</p>
+<p><strong>DrRange</strong>&#x662F;&#x4FE1;&#x9053;&#x5141;&#x8BB8;&#x7684;&#x6570;&#x636E;&#x7387;&#x8303;&#x56F4;&#x3002;&#x8FD9;&#x4E2A;&#x5B57;&#x8282;&#x88AB;&#x7B49;&#x5206;&#x4E3A;&#x4E24;&#x4E2A;4&#x4F4D;&#x3002;</p>
+<table>
+   <tr>
+      <td><b>Bits</b></td>
+      <td>[7:4]</td>
+      <td>[3:0</td>
+   </tr>
+   <tr>
+      <td><b>DrRange</b></td>
+      <td>Max data rate</td>
+      <td>Min data rate</td>
+   </tr>
+</table>
+
+<p>&#x6309;&#x7167;LoRaWAN&#x5730;&#x533A;&#x53C2;&#x6570;&#x6587;&#x4EF6;[PARAMS]&#x7684;&#x5B9A;&#x4E49;&#xFF0C;&#x201C;Min data rate&#x201D;&#x5B57;&#x6BB5;&#x6307;&#x5B9A;&#x4E86;&#x4FE1;&#x9053;&#x5141;&#x8BB8;&#x7684;&#x6700;&#x4F4E;&#x6570;&#x636E;&#x7387;&#x3002;&#x4F8B;&#x5982;0&#x5728;&#x6B27;&#x76DF;&#x7269;&#x7406;&#x5C42;&#x4E2D;&#x6307;&#x5B9A;DR0/125 kHz&#x3002;&#x7C7B;&#x4F3C;&#x7684;&#xFF0C;&#x201C;Max data rate&#x201D;&#x6307;&#x5B9A;&#x4E86;&#x6700;&#x9AD8;&#x6570;&#x636E;&#x7387;&#x3002;&#x4F8B;&#x5982;&#x5728;&#x6B27;&#x76DF;&#x89C4;&#x8303;&#x4E2D;&#xFF0C;DrRange = 0x77 &#x610F;&#x5473;&#x7740;&#x5728;&#x4FE1;&#x9053;&#x4E0A;&#x53EA;&#x5141;&#x8BB8;50 kpbs GFSK&#xFF0C;DrRange = 0x50&#x610F;&#x5473;&#x7740;&#x652F;&#x6301; DR0/125kHz &#x5230; DR5/125 kHz&#x7684;&#x6570;&#x636E;&#x7387;&#x3002;</p>
+<p>&#x5C06;&#x7EC8;&#x7AEF;&#x63A5;&#x6536;&#x5230;&#x4EE5;&#x4E0A;&#x7684;&#x547D;&#x4EE4;&#x4E4B;&#x540E;&#xFF0C;&#x9700;&#x8981;&#x4EE5;<strong>PingSlotFreqAns</strong>&#x547D;&#x4EE4;&#x8FDB;&#x884C;&#x56DE;&#x590D;&#x3002;&#x8FD9;&#x4E2A;MAC&#x547D;&#x4EE4;&#x7684;&#x8F7D;&#x8377;&#x5305;&#x542B;&#x4E86;&#x4EE5;&#x4E0B;&#x7684;&#x4FE1;&#x606F;:</p>
+<table>
+   <tr>
+      <td><b>Size(bytes)</b></td>
+      <td>1</td>
+   </tr>
+   <tr>
+      <td><b>pingSlotChannelAns Payload</b></td>
+      <td>Status</td>
+   </tr>
+</table>
+
+<p><strong>Status</strong>&#x7684;&#x4F4D;&#x6BB5;&#x6709;&#x4EE5;&#x4E0B;&#x542B;&#x4E49;:</p>
+<table>
+   <tr>
+      <td><b>Bits</b></td>
+      <td>[7:2]</td>
+      <td>1</td>
+      <td>0</td>
+   </tr>
+   <tr>
+      <td><b>Statusd</b></td>
+      <td>RFU</td>
+      <td>Data rate range ok</td>
+      <td>Channel frequency ok</td>
+   </tr>
+</table>
+
+<table>
+   <tr>
+      <td></td>
+      <td><b>Bit = 0</b></td>
+      <td><b>Bit = 1</b></td>
+   </tr>
+   <tr>
+      <td><b>Data rae range ok</b></td>
+      <td>&#x8BBE;&#x7F6E;&#x7684;&#x6570;&#x636E;&#x7387;&#x8D85;&#x8FC7;&#x4E86;&#x8BE5;&#x7EC8;&#x7AEF;&#x5F53;&#x524D;&#x5B9A;&#x4E49;&#x7684;&#x8303;&#x56F4;&#xFF0C;&#x4FDD;&#x6301;&#x4E4B;&#x524D;&#x7684;&#x6570;&#x636E;&#x7387;&#x8303;&#x56F4;</td>
+      <td>&#x6570;&#x636E;&#x7387;&#x8303;&#x56F4;&#x4E0E;&#x7EC8;&#x7AEF;&#x517C;&#x5BB9;</td>
+   </tr>
+   <tr>
+      <td><b>Channel frequency ok</b></td>
+      <td>&#x7EC8;&#x7AEF;&#x65E0;&#x6CD5;&#x4F7F;&#x7528;&#x8BE5;&#x9891;&#x7387;&#xFF0C;&#x4FDD;&#x6301;&#x4E4B;&#x524D;&#x7684;&#x9891;&#x7387;</td>
+      <td>&#x7EC8;&#x7AEF;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x8FD9;&#x4E2A;&#x9891;&#x7387;</td>
+   </tr>
+</table>
+
+<h3 id="144-beacontimingreq"><a name="14.4">14.4 BeaconTimingReq</a></h3>
+<p>&#x7EC8;&#x7AEF;&#x4F7F;&#x7528;&#x8BE5;&#x547D;&#x4EE4;&#x6765;&#x8BF7;&#x6C42;&#x4E0B;&#x4E00;&#x4E2A;&#x4FE1;&#x6807;&#x7684;&#x65F6;&#x95F4;&#x4EE5;&#x53CA;&#x4FE1;&#x9053;&#xFF0C;&#x8BE5;MAC&#x547D;&#x4EE4;&#x6CA1;&#x6709;&#x8F7D;&#x8377;&#x3002;<strong>BeaconTimingReq</strong> &amp; <strong>BeaconTimingAns</strong>&#x673A;&#x5236;&#x4EC5;&#x4EC5;&#x7528;&#x4E8E;&#x52A0;&#x5FEB;&#x521A;&#x5F00;&#x59CB;&#x7684;&#x4FE1;&#x6807;&#x641C;&#x7D22;&#x4EE5;&#x964D;&#x4F4E;&#x7EC8;&#x7AEF;&#x7684;&#x80FD;&#x91CF;&#x9700;&#x6C42;&#x3002;</p>
+<p>&#x7F51;&#x7EDC;&#x5728;&#x7ED9;&#x5B9A;&#x7684;&#x65F6;&#x95F4;&#x5468;&#x671F;&#x5185;&#x53EF;&#x80FD;&#x53EA;&#x5E94;&#x7B54;&#x6709;&#x9650;&#x6570;&#x91CF;&#x7684;&#x8BF7;&#x6C42;&#x3002;&#x7EC8;&#x7AEF;&#x4E0D;&#x80FD;&#x671F;&#x671B;&#x5728;&#x53D1;&#x51FA;<strong>BeaconTimingReq</strong>&#x547D;&#x4EE4;&#x4E4B;&#x540E;&#x7ACB;&#x523B;&#x6536;&#x5230;<strong>BeaconTimingAns</strong>&#x547D;&#x4EE4;&#x7684;&#x5E94;&#x7B54;&#x3002;&#x60F3;&#x8981;&#x5207;&#x6362;&#x5230;Class B&#x6A21;&#x5F0F;&#x7684;&#x5904;&#x4E8E;Class A&#x6A21;&#x5F0F;&#x7684;&#x7EC8;&#x7AEF;&#x4E00;&#x5C0F;&#x65F6;&#x4E4B;&#x5185;&#x4E0D;&#x5E94;&#x8BE5;&#x53D1;&#x9001;&#x8D85;&#x8FC7;&#x4E00;&#x4E2A;<strong>BeaconTimingReq</strong>&#x547D;&#x4EE4;&#x3002;</p>
+<p>&#x9700;&#x8981;&#x5FEB;&#x901F;&#x9501;&#x5B9A;&#x4FE1;&#x6807;&#x7684;&#x7EC8;&#x7AEF;&#x5FC5;&#x987B;&#x5B9E;&#x73B0;&#x81EA;&#x4E3B;&#x4FE1;&#x6807;&#x67E5;&#x627E;&#x7B97;&#x6CD5;&#x3002;</p>
+<h3 id="145-beacontimingans"><a name="14.5">14.5 BeaconTimingAns</a></h3>
+<p>&#x7F51;&#x7EDC;&#x7528;&#x8BE5;&#x547D;&#x4EE4;&#x6765;&#x5E94;&#x7B54;<strong>BeaconTimingReq</strong>&#x547D;&#x4EE4;&#x7684;&#x8BF7;&#x6C42;&#x3002;</p>
+<table>
+   <tr>
+      <td><b>Size(bytes)</b></td>
+      <td>2</td>
+      <td>1</td>
+   </tr>
+   <tr>
+      <td><b>BeaconInfoReqPayload</b></td>
+      <td>Delay</td>
+      <td>Channel</td>
+   </tr>
+</table>
+
+<p><strong>&quot;Delay&quot;</strong>&#x5B57;&#x6BB5;&#x662F;&#x4E00;&#x4E2A;16&#x4F4D;&#x7684;&#x65E0;&#x7B26;&#x53F7;&#x6574;&#x6570;&#x3002;&#x5982;&#x679C;&#x5F53;&#x524D;&#x4E0B;&#x884C;&#x5E27;&#x7684;&#x7ED3;&#x675F;&#x4E0E;&#x4E0B;&#x4E00;&#x4E2A;&#x4FE1;&#x6807;&#x5E27;&#x7684;&#x5F00;&#x59CB;&#x4E4B;&#x95F4;&#x7684;&#x5269;&#x4F59;&#x65F6;&#x95F4;&#x8BB0;&#x4E3A; RTime:</p>
+<pre><code>                              30ms x (Delay+1) &gt; RTime &gt;= 30ms x Delay
+</code></pre><p>&#x5728;&#x4FE1;&#x6807;&#x4EA4;&#x66FF;&#x4F7F;&#x7528;&#x591A;&#x4E2A;&#x4FE1;&#x9053;&#x7684;&#x7F51;&#x7EDC;&#x4E2D;&#xFF0C;<strong>&#x201C;Channel&#x201D;</strong>&#x5B57;&#x6BB5;&#x662F;&#x4E0B;&#x4E00;&#x4E2A;&#x4FE1;&#x6807;&#x5E7F;&#x64AD;&#x6240;&#x4F7F;&#x7528;&#x7684;&#x4FE1;&#x9053;&#x7F16;&#x53F7;&#x3002;&#x5BF9;&#x4E8E;&#x4FE1;&#x6807;&#x5E7F;&#x64AD;&#x9891;&#x7387;&#x56FA;&#x5B9A;&#x7684;&#x7F51;&#x7EDC;&#x6765;&#x8BF4;&#xFF0C;&#x8FD9;&#x4E2A;&#x5B57;&#x6BB5;&#x503C;&#x4E3A;0&#x3002;</p>
+
+                                
+                                </section>
+                            
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="13 Class B Downlink slot timing.html#13.2" class="navigation navigation-prev " aria-label="Previous page: 13.2 时隙随机化">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="14 Class B MAC commands.html#14.1" class="navigation navigation-next " aria-label="Next page: 14.1 PingSlotInfoReq MAC命令">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"第14章 Class B MAC命令","level":"1.17","depth":1,"next":{"title":"14.1 PingSlotInfoReq MAC命令","level":"1.17.1","depth":2,"anchor":"#14.1","path":"chapter/14 Class B MAC commands.md","ref":"chapter/14 Class B MAC commands.md#14.1","articles":[]},"previous":{"title":"13.2 时隙随机化","level":"1.16.2","depth":2,"anchor":"#13.2","path":"chapter/13 Class B Downlink slot timing.md","ref":"chapter/13 Class B Downlink slot timing.md#13.2","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{"maxIndexSize":1000000},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"chapter/14 Class B MAC commands.md","mtime":"2019-10-24T03:30:17.292Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-10-24T05:41:03.473Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/buttons.js"></script>
+        
+    
+
+    </body>
+</html>
+
